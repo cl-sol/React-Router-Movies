@@ -1,6 +1,19 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
+
 
 const MovieList = props => {
+  const [movies, setMovies] = useState([]);
+
+  // useEffect( () => {
+  //   axios.get("http://localhost:5000/api/movies")
+  //   .then(response => {
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //   })
+  // })
+
   return (
     <div className="movie-list">
       {props.movies.map(movie => (
